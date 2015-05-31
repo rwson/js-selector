@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/js-selector.js"></script>
+    <script>
+        $s(function(){
+            console.log($s("#test-id"));
+            console.log($s(".test-class"));
+            console.log($s(".test-children #children2 .children2-1"));
+            console.log($s(".test-children #children2 p"));
+            console.log($s("p"));
+            console.log($s(".test-first-child>.first-child2"));
+            console.log($s(".test-first-child>div"));
+            console.log($s(".test-first-child>div p"));
+            console.log($s($s(".test-first-child>div p")));
+            console.log($s(".test-first-child>p").elements);
+        });
+    </script>
+</head>
+<body>
+    <div id="test-id"></div>
+
+    <div class="test-class"></div>
+
+    <div class="test-children">
+        <div class="children1"></div>
+        <div id="children2">
+            <div class="children2-1"></div>
+            <p class="children2-2"></p>
+        </div>
+    </div>
+
+    <div class="test-first-child">
+        <div id="first-child1"></div>
+        <div></div>
+        <div></div>
+        <p class="first-child2"></p>
+    </div>
+
+    <p></p>
+
+</body>
+</html>
